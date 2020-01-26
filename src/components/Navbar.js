@@ -12,25 +12,25 @@ const Navbar = class extends React.Component {
     }
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
+  // toggleHamburger = () => {
+  //   // toggle the active boolean in the state
+  //   this.setState(
+  //     {
+  //       active: !this.state.active,
+  //     },
+  //     // after state has been updated,
+  //     () => {
+  //       // set the class in state for the navbar accordingly
+  //       this.state.active
+  //         ? this.setState({
+  //             navBarActiveClass: 'is-active',
+  //           })
+  //         : this.setState({
+  //             navBarActiveClass: '',
+  //           })
+  //     }
+  //   )
+  // }
 
   render() {
     return (
@@ -48,7 +48,7 @@ const Navbar = class extends React.Component {
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+              // onClick={() => this.toggleHamburger()}
             >
               <span />
               <span />
