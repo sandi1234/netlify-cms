@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Bunda
 image: /img/Fishing-boat-during-sunrise.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Inspire to do more
+subheading: And be a part of the furture
 mainpitch:
   title: Why Kaldi
   description: >
