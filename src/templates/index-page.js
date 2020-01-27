@@ -1,10 +1,63 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import { Container, Row, Col } from "react-bootstrap"
+import styled from 'styled-components';
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+
+const LandingImage = styled.div`
+margin-top: -100px;
+height: 100vh;
+`
+
+const MainContentWrapper = styled(Container)`
+  padding-top: 20%;
+`;
+
+const Heading = styled.h1`
+font-family: "FF Mark", Helvetica, Arial, sans-serif;
+font-size: 5rem;
+font-style: normal;
+font-weight: 900;
+letter-spacing: -0.03125em;
+line-height: 1.06;
+color: white;
+`
+
+const SubHeading = styled.h2`
+font-family: "FF Mark", Helvetica, Arial, sans-serif;
+font-size: 3.5rem;
+font-style: normal;
+font-weight: 900;
+letter-spacing: -0.03125em;
+line-height: 1.06;
+color: white;
+`
+
+const ButtonLinkIntro = styled(Link)`
+font-family: "FF Mark", Helvetica, Arial, sans-serif;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 600;
+color: white;
+display: block;
+width: 100%;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 5px;
+padding: 15px 30px 15px 30px;
+text-decoration: none;
+&:hover{
+    color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+}
+`
 
 export const IndexPageTemplate = ({
   image,
@@ -15,55 +68,30 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
+  <>
+    <LandingImage
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
+    <MainContentWrapper>
+           <Row>
+              <Col lg={12} md={12} sm={12}>
+                  <Heading className="text-uppercase text-center">{title}</Heading>     
+                  <SubHeading className="text-uppercase text-center mb-5">{subheading}</SubHeading>     
+                  <Row className="justify-content-md-center">
+                      <Col lg={6} md={6} sm={6} className="text-center">
+                          <ButtonLinkIntro to="#"className="text-uppercase"  variant="primary" size="lg" block>
+                            Get involved
+                          </ButtonLinkIntro>
+                      </Col>                 
+                  </Row>
+              </Col>
+        </Row>
+    </MainContentWrapper>
+    </LandingImage>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -111,7 +139,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-  </div>
+  </>
 )
 
 IndexPageTemplate.propTypes = {
