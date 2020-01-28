@@ -74,6 +74,9 @@ export const IndexPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center', 
+        backgroundSize: "cover",
       }}
     >
     <MainContentWrapper>

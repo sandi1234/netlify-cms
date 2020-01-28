@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
+import './bootstrapClasses.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
