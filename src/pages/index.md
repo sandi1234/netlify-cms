@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: Bunda
+title: Inspire to do more
 image: /img/Fishing-boat-during-sunrise.jpg
-heading: Inspire to do more
+heading: Who we are
 subheading: And be a part of the furture
 mainpitch:
   title: Why Kaldi
