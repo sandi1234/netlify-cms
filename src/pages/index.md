@@ -2,6 +2,11 @@
 templateKey: index-page
 title: Inspire to do more
 image: /img/Fishing-boat-during-sunrise.jpg
+mainIntro:
+  image: /img/Fishing-boat-during-sunrise.jpg
+  heading: empty
+  subheading: empty
+  btnText: empty
 heading: Who we are
 subheading: And be a part of the furture
 mainpitch:

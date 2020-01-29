@@ -64,6 +64,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
+  mainIntro,
   mainpitch,
   description,
   intro,
@@ -87,7 +88,7 @@ export const IndexPageTemplate = ({
                   <Row className="justify-content-md-center">
                       <Col lg={6} md={6} sm={6} className="text-center">
                           <ButtonLinkIntro to="#"className="text-uppercase"  variant="primary" size="lg" block>
-                            Get involved
+                            {mainIntro.subheading}
                           </ButtonLinkIntro>
                       </Col>                 
                   </Row>
@@ -150,6 +151,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  mainIntro: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -167,6 +169,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        mainIntro={frontmatter.mainIntro}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -190,19 +193,19 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        # mainIntro{
-        #   image {
-        #   childImageSharp {
-        #     fluid(maxWidth: 2048, quality: 100) {
-        #       ...GatsbyImageSharpFluid
-        #     }
-        #   }
-        # }
-        # title
-        # subheading
-        # btnText
+        mainIntro{
+          image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        heading
+        subheading
+        btnText
 
-        # }
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
