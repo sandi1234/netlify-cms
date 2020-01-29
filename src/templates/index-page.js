@@ -190,6 +190,19 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        # mainIntro{
+        #   image {
+        #   childImageSharp {
+        #     fluid(maxWidth: 2048, quality: 100) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
+        # title
+        # subheading
+        # btnText
+
+        # }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
