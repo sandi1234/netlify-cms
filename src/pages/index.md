@@ -1,6 +1,11 @@
 ---
 templateKey: index-page
-title: Inspire to do more
+title: Busoga Nordic
+mainIntro:
+  btnText: Get Involved
+  image: /img/Fishing-boat-during-sunrise.jpg
+  heading: Inspire to do more
+  subheading: And be a part of the furture
 image: /img/Fishing-boat-during-sunrise.jpg
 mainIntro:
   image: /img/Fishing-boat-during-sunrise.jpg
