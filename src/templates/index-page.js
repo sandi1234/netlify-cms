@@ -13,12 +13,12 @@ height: 100vh;
 `
 
 const MainContentWrapper = styled(Container)`
-  padding-top: 20%;
+  // Somthing Special
 `;
 
 const Heading = styled.h1`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 5rem;
+font-size: 6vw;
 font-style: normal;
 font-weight: 900;
 letter-spacing: -0.03125em;
@@ -28,7 +28,7 @@ color: white;
 
 const SubHeading = styled.h2`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 3.5rem;
+font-size: 3.8vw;
 font-style: normal;
 font-weight: 900;
 letter-spacing: -0.03125em;
@@ -38,7 +38,7 @@ color: white;
 
 const ButtonLinkIntro = styled(Link)`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 2.5rem;
+font-size: 3vw;
 font-style: normal;
 font-weight: 600;
 color: white;
@@ -65,6 +65,7 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainIntro,
+  whoweare,
   mainpitch,
   description,
   intro,
@@ -73,22 +74,22 @@ export const IndexPageTemplate = ({
     <LandingImage
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          !!mainIntro.image.childImageSharp ? mainIntro.image.childImageSharp.fluid.src : mainIntro.image
         })`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center', 
         backgroundSize: "cover",
       }}
     >
-    <MainContentWrapper>
-           <Row>
+    <MainContentWrapper className="h-100">
+           <Row className="h-100 justify-content-center align-items-center">
               <Col lg={12} md={12} sm={12}>
-                  <Heading className="text-uppercase text-center">{title}</Heading>     
-                  <SubHeading className="text-uppercase text-center mb-5">{subheading}</SubHeading>     
+                  <Heading className="text-uppercase text-center">{mainIntro.heading}</Heading>     
+                  <SubHeading className="text-uppercase text-center mb-5">{mainIntro.subheading}</SubHeading>     
                   <Row className="justify-content-md-center">
                       <Col lg={6} md={6} sm={6} className="text-center">
                           <ButtonLinkIntro to="#"className="text-uppercase"  variant="primary" size="lg" block>
-                            {mainIntro.subheading}
+                            {mainIntro.btnText}
                           </ButtonLinkIntro>
                       </Col>                 
                   </Row>
@@ -152,6 +153,7 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainIntro: PropTypes.object,
+  whoweare: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -170,6 +172,7 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainIntro={frontmatter.mainIntro}
+        whoweare={frontmatter.whoweare}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -193,6 +196,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        # Main Intro
         mainIntro{
           image {
           childImageSharp {
@@ -205,6 +209,20 @@ export const pageQuery = graphql`
         subheading
         btnText
 
+        }
+        # Main Who We Are
+        whoweare{
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          col1
+          col2
+          col3
+          heading
+          btnText
+          btnLink
         }
         image {
           childImageSharp {

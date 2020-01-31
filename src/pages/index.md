@@ -6,12 +6,15 @@ mainIntro:
   image: /img/Fishing-boat-during-sunrise.jpg
   heading: Inspire to do more
   subheading: And be a part of the furture
-image: /img/Fishing-boat-during-sunrise.jpg
-mainIntro:
+whoweare:
   image: /img/Fishing-boat-during-sunrise.jpg
-  heading: empty
-  subheading: empty
-  btnText: empty
+  heading: Who We ARE
+  col1: col 1
+  col2: col 2
+  col3: col 3
+  btnText: button
+  btnLink: link
+image: /img/Fishing-boat-during-sunrise.jpg
 heading: Who we are
 subheading: And be a part of the furture
 mainpitch:
