@@ -14,6 +14,18 @@ whoweare:
   col3: col 3
   btnText: button
   btnLink: link
+team:
+  image: /img/Fishing-boat-during-sunrise.jpg
+  heading: This is a heading
+  content: This is the content
+  btnText: Button Text
+  btnLink: Link
+partner:
+  image: /img/Fishing-boat-during-sunrise.jpg
+  heading: This is a heading
+  content: This is the content
+  btnText: Button Text
+  btnLink: Link
 image: /img/Fishing-boat-during-sunrise.jpg
 heading: Who we are
 subheading: And be a part of the furture

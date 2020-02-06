@@ -16,6 +16,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         intro={data.intro || { blurbs: [] }}
         mainIntro={data.mainIntro || {}}
         whoweare={data.whoweare || {}}
+        team={data.mainpitch || {}}
+        partner={data.mainpitch || {}}
         mainpitch={data.mainpitch || {}}
       />
     )
