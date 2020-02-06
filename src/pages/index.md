@@ -10,13 +10,13 @@ team:
   btnLink: Link
   btnText: Button Text
   content: This is the content torl
-  image: /img/Fishing-boat-during-sunrise.jpg
+  image: /img/apple-touch-icon.png
   heading: This is a heading
 partner:
   btnLink: Link
   btnText: Button Text
   content: This is the content
-  image: /img/Fishing-boat-during-sunrise.jpg
+  image: /img/apple-touch-icon.png
   heading: This is a heading
 whoweare:
   btnLink: link
