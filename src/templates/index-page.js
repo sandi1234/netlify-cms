@@ -308,7 +308,7 @@ export const pageQuery = graphql`
           btnLink
         }
         # Partner
-        team{
+        partner{
           image{
               childImageSharp {
               fluid(maxWidth: 300, quality: 100) {
