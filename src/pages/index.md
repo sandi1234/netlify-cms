@@ -6,26 +6,26 @@ mainIntro:
   image: /img/Fishing-boat-during-sunrise.jpg
   heading: Inspire to do more
   subheading: And be a part of the furture
-whoweare:
+team:
+  btnLink: Link
+  btnText: Button Text
+  content: This is the content torl
   image: /img/Fishing-boat-during-sunrise.jpg
-  heading: Who We ARE
+  heading: This is a heading
+partner:
+  btnLink: Link
+  btnText: Button Text
+  content: This is the content
+  image: /img/Fishing-boat-during-sunrise.jpg
+  heading: This is a heading
+whoweare:
+  btnLink: link
+  btnText: button
   col1: col 1
   col2: col 2
   col3: col 3
-  btnText: button
-  btnLink: link
-team:
   image: /img/Fishing-boat-during-sunrise.jpg
-  heading: This is a heading
-  content: This is the content
-  btnText: Button Text
-  btnLink: Link
-partner:
-  image: /img/Fishing-boat-during-sunrise.jpg
-  heading: This is a heading
-  content: This is the content
-  btnText: Button Text
-  btnLink: Link
+  heading: Who We ARE
 image: /img/Fishing-boat-during-sunrise.jpg
 heading: Who we are
 subheading: And be a part of the furture
