@@ -15,6 +15,7 @@ export const AboutPageTemplate = ({
   return (
     <div>
       <Main 
+        title={title}
         howitallstarted={howitallstarted} 
         mission={mission}
         vision={vision}
