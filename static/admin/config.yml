@@ -27,7 +27,20 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/project"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
   - name: "pages"
     label: "Pages"
     files:
@@ -78,6 +91,36 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: Team, name: team, widget: object, fields: [{label: Teammembers, name: teammembers, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Name, name: name, widget: string}, {label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Phone, name: phone, widget: number}, {label: Mail, name: mail, widget: string}]}]}
+      - file: "src/pages/about/index.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: How It All Started, name: howitallstarted, widget: object, fields: [
+              {label: Heading, name: heading, widget: string}, 
+              {label: Collum Left, name: collumLeft, widget: text}, 
+              {label: Collum Right, name: collumRight, widget: text}
+            ]}
+          - {label: Mission, name: mission, widget: object, fields: [
+              {label: Title, name: title, widget: string}, 
+              {label: Collum 1, name: collum1, widget: text}, 
+              {label: Collum 2, name: collum2, widget: text}, 
+              {label: Collum 3, name: collum3, widget: text} 
+              ]}
+          - {label: Vision, name: vision, widget: object, fields: [
+              {label: Title, name: title, widget: string}, 
+              {label: Collum 1, name: collum1, widget: text}, 
+              {label: Collum 2, name: collum2, widget: text}, 
+              {label: Collum 3, name: collum3, widget: text} 
+            ]}
+          - {label: Values, name: values, widget: object, fields: [
+              {label: Title, name: title, widget: string}, 
+              {label: Collum 1, name: collum1, widget: text}, 
+              {label: Collum 2, name: collum2, widget: text}, 
+              {label: Collum 3, name: collum3, widget: text} 
+            ]}
+    
 
 
 

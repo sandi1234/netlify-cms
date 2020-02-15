@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import MainJoin from '../components/join/MainJoin'
+import MainProjects from '../components/projects/MainProjects'
 
 const LandingImage = styled.div`
 margin-top: -100px;
@@ -95,6 +97,8 @@ export const IndexPageTemplate = ({
   subheading,
   mainIntro,
   whoweare,
+  team,
+  partner,
   mainpitch,
   description,
   intro,
@@ -160,6 +164,8 @@ export const IndexPageTemplate = ({
     </CustomCard>
       </Row>
     </Container>
+    <MainJoin  team={team} partner={partner}/>
+    <MainProjects />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
