@@ -1,8 +1,8 @@
 ---
 templateKey: team-page
 title: Team
-team:
-  teammembers:
+teammembers:
+  members:
     # - image: /img/products-grid2.jpg
     - description: A picture of a coffe cup
       image: /img/products-grid2.jpg

@@ -5,13 +5,13 @@ import Layout from '../components/Layout'
 
 export const TeamPageTemplate = ({
   title,
-  team
+  teammembers
 }) => (
     <>
     <div>
     {title}
       <div>
-        {team.teammembers.map((member, index) => (
+        {teammembers.members.map((member, index) => (
           <li key={index}>{member.name}</li>
         ))}
       </div>
@@ -21,7 +21,7 @@ export const TeamPageTemplate = ({
 
 TeamPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  team: PropTypes.object,
+  teammembers: PropTypes.object,
 
 }
 
@@ -32,7 +32,7 @@ const TeamPage = ({ data }) => {
     <Layout>
       <TeamPageTemplate
         title={frontmatter.title}
-        team={frontmatter.team}
+        teammembers={frontmatter.teammembers}
       />
     </Layout>
   )
@@ -50,12 +50,12 @@ export default TeamPage
 
 export const teamPageQuery = graphql`
   query TeamPage{
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "team-page" } }) {
       html
       frontmatter {
       title
-      team{
-         teammembers{
+      teammembers{
+         members{
         #   image {
         #   childImageSharp {
         #     fluid(maxWidth: 150, quality: 100) {

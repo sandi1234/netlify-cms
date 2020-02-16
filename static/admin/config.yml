@@ -81,8 +81,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Team, name: team, widget: object, fields: [
-              {label: Teammembers, name: teammembers, widget: list, fields: [
+          - {label: Team Members, name: teammembers, widget: object, fields: [
+              {label: Members, name: members, widget: list, fields: [
                 {label: Image, name: image, widget: image}, 
                 {label: Name, name: name, widget: string}, 
                 {label: Title, name: title, widget: string}, 
