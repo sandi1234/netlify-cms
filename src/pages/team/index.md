@@ -3,17 +3,11 @@ templateKey: team-page
 title: Team
 teammembers:
   members:
-    - image: /img/products-grid2.jpg
     - description: Chairman Description
       image: /img/products-grid2.jpg
       mail: chairman@chairman.com
       name: Rose Lastname
       phone: 12345677
-      title: Green
-    - description: This is only a test
-      image: /img/apple-touch-icon.png
-      mail: testmember@two.com
-      name: Member Two
       title: Chairman
     - description: Vise Chairman Description
       image: /img/apple-touch-icon.png
