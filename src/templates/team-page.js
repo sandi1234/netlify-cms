@@ -2,61 +2,75 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
 
-export const TeamPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
-  return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
+export const TeamPageTemplate = ({
+  title,
+  team
+}) => (
+    <>
+    <div>
+    {title}
+      <div>
+        {team.teammembers.map((member, index) => (
+          <li key={index}>{member.name}</li>
+        ))}
       </div>
-    </section>
+    </div>
+    </>
   )
-}
 
 TeamPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  team: PropTypes.object,
+
 }
 
 const TeamPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <TeamPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={frontmatter.title}
+        team={frontmatter.team}
       />
     </Layout>
   )
 }
 
 TeamPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default TeamPage
 
 export const teamPageQuery = graphql`
-  query TeamPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query TeamPage{
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
-        title
+      title
+      team{
+         teammembers{
+        #   image {
+        #   childImageSharp {
+        #     fluid(maxWidth: 150, quality: 100) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
+          mail
+          name
+          title
+          description
+          phone
+        }
+      }
+       
       }
     }
   }

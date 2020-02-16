@@ -23,7 +23,7 @@ const HowItAllStarted = (props) => {
     <CustomContainer>
         <Headline>{dataContent.heading}</Headline>
         <Row>
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className="mb-3">
                 {dataContent.collumLeft}
             </Col>
             <Col lg={6} md={6} sm={12}>

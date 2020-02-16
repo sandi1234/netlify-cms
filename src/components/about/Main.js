@@ -1,6 +1,7 @@
 import React from 'react'
 import HowItAllStarted from './HowItAllStarted'
 import Navigation from './Navigation'
+import Projects from '../projects/MainProjects'
 const Main = (props) => {
     const {howitallstarted, mission, vision, values} = props;
   return (
@@ -11,6 +12,7 @@ const Main = (props) => {
             dataVision={vision}
             dataValues={values}
             />
+        <Projects />
     </>
   )
 }
