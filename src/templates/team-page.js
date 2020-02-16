@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import {Row, Col, Container, Card} from "react-bootstrap"
+import {Row, Col, Container, ListGroup, ListGroupItem, Card} from "react-bootstrap"
 
 
 
@@ -13,11 +13,16 @@ function Member(props){
       <Card>
         <Card.Img variant="top" src="https://via.placeholder.com/150" />
         <Card.Body>
-        <Card.Title>{member.title}</Card.Title>
+        <Card.Title>{member.name}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">{member.title}</Card.Subtitle>
         <Card.Text>
           {member.description}
         </Card.Text>
         </Card.Body>
+        <ListGroup className="list-group-flush">
+          <ListGroupItem>Phone: {member.phone}</ListGroupItem>
+          <ListGroupItem>E-mail: {member.mail}</ListGroupItem>
+        </ListGroup>
       </Card>
     </Col>
   )
