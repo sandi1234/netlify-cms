@@ -3,13 +3,15 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import {Row, Col, Container, ListGroup, ListGroupItem, Card} from "react-bootstrap"
+import { faMobileAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
 function Member(props){
   const {member} = props;
   return(
-    <Col lg={3} md={4} sm={12}>
+    <Col lg={4} md={4} sm={12}>
       <Card>
         <Card.Img variant="top" src="https://via.placeholder.com/150" />
         <Card.Body>
@@ -20,8 +22,8 @@ function Member(props){
         </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>Phone: {member.phone}</ListGroupItem>
-          <ListGroupItem>E-mail: {member.mail}</ListGroupItem>
+          <ListGroupItem><FontAwesomeIcon icon={faMobileAlt} /> {member.phone}</ListGroupItem>
+          <ListGroupItem><FontAwesomeIcon icon={faEnvelope} />  {member.mail}</ListGroupItem>
         </ListGroup>
       </Card>
     </Col>
