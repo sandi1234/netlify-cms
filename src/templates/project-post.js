@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql} from 'gatsby'
+import {Row, Col, Container, ListGroup, ListGroupItem, Card} from "react-bootstrap"
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -10,39 +9,20 @@ export const ProjectPostTemplate = ({
   content,
   contentComponent,
   description,
+  date,
   tags,
   title,
   helmet,
 }) => {
-  const ProjectContent = contentComponent || Content
+  const ProjecBodytContent = contentComponent || Content
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <ProjectContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
+    <Container>
+      <h1>{title}</h1>
+      <h5>{date}</h5>
+      <p>{description}</p>
+      <ProjecBodytContent content={content} />
+    </Container>
   )
 }
 
@@ -50,6 +30,7 @@ ProjectPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  date: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -59,21 +40,14 @@ const ProjectPost = ({ data }) => {
 
   return (
     <Layout>
+      Project-post
       <ProjectPostTemplate
-        content={Project.html}
-        contentComponent={HTMLContent}
-        description={Project.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Projects">
-            <title>{`${Project.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${Project.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={Project.frontmatter.tags}
-        title={Project.frontmatter.title}
+         content={Project.html}
+         date={Project.frontmatter.date}
+         contentComponent={HTMLContent}
+         description={Project.frontmatter.description}
+         tags={Project.frontmatter.tags}
+         title={Project.frontmatter.title}
       />
     </Layout>
   )

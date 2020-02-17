@@ -7,10 +7,13 @@ const ProjectPostPreview = ({ entry, getAsset }) => {
   
   if (data) {
     return (
+      <>
   <ProjectPostTemplate
   title={data.title}
   description={data.description}
   />
+  lort
+  </>
 )
 } else {
   return <div>Loading...</div>
