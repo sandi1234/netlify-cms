@@ -7,7 +7,8 @@ import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
-import ProjectPostPreview from '../preview-templates/ProjectPostPreview'
+import ProjectPostPreview from './preview-templates/ProjectPostPreview'
+import TeamPagePreview from './preview-templates/TeamPagePreview'
 
 // CMS.registerMediaLibrary(uploadcare)
 // CMS.registerMediaLibrary(cloudinary)
@@ -16,6 +17,7 @@ CMS.registerPreviewTemplate('index', withStyledComponentsRendered(IndexPagePrevi
 
 // CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', withStyledComponentsRendered(AboutPagePreview));
+CMS.registerPreviewTemplate('team', withStyledComponentsRendered(TeamPagePreview));
 CMS.registerPreviewTemplate('project', withStyledComponentsRendered(ProjectPostPreview));
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
