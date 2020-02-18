@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql} from 'gatsby'
-import {Row, Col, Container, ListGroup, ListGroupItem, Card} from "react-bootstrap"
+import styled from 'styled-components';
+import {Container} from "react-bootstrap"
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+
+const CustomContainer = styled(Container)`
+width: 50%;
+`
 
 export const ProjectPostTemplate = ({
   content,
@@ -17,12 +22,13 @@ export const ProjectPostTemplate = ({
   const ProjecBodytContent = contentComponent || Content
 
   return (
-    <Container>
+    <CustomContainer className="bg-success">
+      Project-post
       <h1>{title}</h1>
       <h5>{date}</h5>
       <p>{description}</p>
       <ProjecBodytContent content={content} />
-    </Container>
+    </CustomContainer>
   )
 }
 
@@ -40,7 +46,7 @@ const ProjectPost = ({ data }) => {
 
   return (
     <Layout>
-      Project-post
+    <Container className="bg-success">   
       <ProjectPostTemplate
          content={Project.html}
          date={Project.frontmatter.date}
@@ -49,6 +55,7 @@ const ProjectPost = ({ data }) => {
          tags={Project.frontmatter.tags}
          title={Project.frontmatter.title}
       />
+      </Container>
     </Layout>
   )
 }

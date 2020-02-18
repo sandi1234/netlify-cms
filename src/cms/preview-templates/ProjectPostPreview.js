@@ -1,20 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProjectPostTemplate } from '../../templates/project-post'
+import { ProjectPostTemplate } from '../../templates/projects-post'
 
-const ProjectPostPreview = ({ entry, getAsset }) => {
+const ProjectPostPreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
-  
+  const tags = entry.getIn(['data', 'tags'])
+
   if (data) {
-    return (
-      <>
-  <ProjectPostTemplate
-  title={data.title}
-  description={data.description}
-  />
-  lort
-  </>
-)
+
+  return (
+    <ProjectPostTemplate
+      description={data.description}
+      date={data.date}
+      tags={tags && tags.toJS()}
+      title={data.title}
+      content={data.content || {}}
+    />
+  )
 } else {
   return <div>Loading...</div>
 }

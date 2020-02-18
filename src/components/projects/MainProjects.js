@@ -139,7 +139,7 @@ MainProjects.propTypes = {
         query MainProjectsQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "project-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "projects-post" } } }
           ) {
             edges {
               node {
