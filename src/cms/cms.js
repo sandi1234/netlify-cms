@@ -18,7 +18,7 @@ CMS.registerPreviewTemplate('index', withStyledComponentsRendered(IndexPagePrevi
 // CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', withStyledComponentsRendered(AboutPagePreview));
 CMS.registerPreviewTemplate('team', withStyledComponentsRendered(TeamPagePreview));
-CMS.registerPreviewTemplate('projects', withStyledComponentsRendered(ProjectPostPreview));
+CMS.registerPreviewTemplate('project', withStyledComponentsRendered(ProjectPostPreview));
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 
