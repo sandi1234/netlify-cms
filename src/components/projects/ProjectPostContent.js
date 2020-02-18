@@ -21,19 +21,11 @@ const Description = styled.p`
   font-wieght: 400;
 `
 
-const PostDate = styled.p`
-  font-size: 16px;
-  color: #212529;
-  font-wieght: 400;
-`
-
-
 const ProjectPostContent = (props) => {
     const {
       content,
       contentComponent,
         description,
-        date,
         // tags,
         title,
         } = props;
@@ -42,10 +34,8 @@ const ProjectPostContent = (props) => {
   return (
     <CustomContainer>
         <Title>{title}</Title>
-        <PostDate>Posted: {date}</PostDate>
         <Description>{description}</Description>
         <PostContent content={content} />
-        <h1>{date}</h1>
     </CustomContainer>
   )
 }

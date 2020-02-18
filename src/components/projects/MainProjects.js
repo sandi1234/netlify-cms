@@ -106,6 +106,7 @@ function ProjectPlacement(props){
     return <ProjectRight project={item} />
 }
 
+
 class MainProjects extends React.Component{
     render() {
         const { data } = this.props
@@ -116,7 +117,7 @@ class MainProjects extends React.Component{
             <h1 className="text-center mb-5 mt-2">Ongoing Projects</h1>
               <Row>
               {projects && projects.map(({node: projectItem}, index) => (
-                <ProjectPlacement key={projectItem.id} item={projectItem} index={index}/>
+                <ProjectPlacement key={projectItem.id} item={projectItem} index={index} />
               ))}
               </Row> 
             </CustomContainer >

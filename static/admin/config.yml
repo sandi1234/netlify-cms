@@ -53,7 +53,15 @@ collections:
           - {label: Main Intro, name: mainIntro, widget: object, fields: [{label: BackgroundImage, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Subheading, name: subheading, widget: string}, {label: ButtonText, name: btnText, widget: string}]}
           - {label: Team, name: team, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Content, name: content, widget: text}, {label: ButtonText, name: btnText, widget: string}, {label: Button Link, name: btnLink, widget: string}]}
           - {label: Partner, name: partner, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Content, name: content, widget: text}, {label: ButtonText, name: btnText, widget: string}, {label: Button Link, name: btnLink, widget: string}]}
-          - {label: Who We Are, name: whoweare, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Col 1, name: col1, widget: text}, {label: Col 2, name: col2, widget: text}, {label: Col 3, name: col3, widget: text}, {label: Button Text, name: btnText, widget: string}, {label: Button Link, name: btnLink, widget: string}]}
+          - {label: Who We Are, name: whoweare, widget: object, fields: [
+              {label: Image, name: image, widget: image}, 
+              {label: Heading, name: heading, widget: string}, 
+              {label: Col 1, name: col1, widget: text}, 
+              {label: Col 2, name: col2, widget: text}, 
+              {label: Col 3, name: col3, widget: text}, 
+              {label: Button Text, name: btnText, widget: string}, 
+              {label: Button Link, name: btnLink, widget: string}
+              ]}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}

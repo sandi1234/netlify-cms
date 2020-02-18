@@ -19,12 +19,12 @@ partner:
   image: /img/apple-touch-icon.png
   heading: This is a heading
 whoweare:
+  image: /img/Fishing-boat-during-sunrise.jpg
   btnLink: link
   btnText: button
   col1: col 1
   col2: col 2
   col3: col 3
-  image: /img/Fishing-boat-during-sunrise.jpg
   heading: Who We ARE
 image: /img/Fishing-boat-during-sunrise.jpg
 heading: Who we are

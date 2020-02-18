@@ -79,6 +79,13 @@ const NextSection = styled.div`
   
 // `
 
+const Image = styled.img`
+    width: 100%;
+    height: auto;
+    // transform: skew(180deg,190deg);
+    // transform: rotateY(20deg);
+`
+
 
 const MainJoin = (props) => {
     const {team, partner} = props;
@@ -92,7 +99,7 @@ const MainJoin = (props) => {
         <CustomCard>
             <SvgImageWrapper>
                 {/* <TestTrol icon={[preFix, faIconleft]}/> */}
-                <img src={team.image.childImageSharp.fluid.src} alt="Something" />
+                <Image src={!!team.image.childImageSharp ? team.image.childImageSharp.fluid.src : team.image} alt="Something" />
             </SvgImageWrapper>
             <Card.Body>
                 <Card.Title>{team.heading}</Card.Title>
@@ -107,7 +114,7 @@ const MainJoin = (props) => {
         <Col lg={4} md={6} sm={12}>
         <CustomCard>
         <SvgImageWrapper>
-        <img src={partner.image.childImageSharp.fluid.src} alt="Something" />
+        <Image src={!!partner.image.childImageSharp ? partner.image.childImageSharp.fluid.src : partner.image} alt="Something" />
 
                 {/* <TestTrol icon={[preFix, faIconright]}/> */}
             </SvgImageWrapper>

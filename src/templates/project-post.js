@@ -12,14 +12,12 @@ export const ProjectPostTemplate = ({
   content,
   contentComponent,
   description,
-  date,
   tags,
   title,
 }) => {
   return (
     <ProjectPostContent 
       title={title}
-      date={date}
       tags={tags}
       description={description}
       content={content}
@@ -41,7 +39,7 @@ const ProjectPost = ({ data }) => {
 
   return (
     <Layout>
-    <Container className="bg-success">   
+    <Container>   
       <ProjectPostTemplate
          content={Project.html}
          date={Project.frontmatter.date}
