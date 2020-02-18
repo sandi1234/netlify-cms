@@ -1,40 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql} from 'gatsby'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import {Container} from "react-bootstrap"
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+// import Content, { HTMLContent } from '../components/Content'
+import ProjectPostContent from '../components/projects/ProjectPostContent'
 
-const CustomContainer = styled(Container)`
-width: 50%;
-`
 
 export const ProjectPostTemplate = ({
-  content,
-  contentComponent,
   description,
   date,
-  tags,
+  // tags,
   title,
   helmet,
 }) => {
-  const ProjecBodytContent = contentComponent || Content
 
   return (
-    <CustomContainer className="bg-success">
-      Project-post
-      <h1>{title}</h1>
-      <h5>{date}</h5>
-      <p>{description}</p>
-      <ProjecBodytContent content={content} />
-    </CustomContainer>
+    <ProjectPostContent 
+      title={title}
+      date={date}
+      description={description}
+    />
   )
 }
 
 ProjectPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
+  // content: PropTypes.node.isRequired,
+  // contentComponent: PropTypes.func,
   description: PropTypes.string,
   date: PropTypes.string,
   title: PropTypes.string,
@@ -48,11 +41,11 @@ const ProjectPost = ({ data }) => {
     <Layout>
     <Container className="bg-success">   
       <ProjectPostTemplate
-         content={Project.html}
+        //  content={Project.html}
          date={Project.frontmatter.date}
-         contentComponent={HTMLContent}
+        //  contentComponent={HTMLContent}
          description={Project.frontmatter.description}
-         tags={Project.frontmatter.tags}
+        //  tags={Project.frontmatter.tags}
          title={Project.frontmatter.title}
       />
       </Container>

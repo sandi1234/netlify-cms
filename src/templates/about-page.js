@@ -13,7 +13,6 @@ export const AboutPageTemplate = ({
 }) => {
 
   return (
-    <div>
       <Main 
         title={title}
         howitallstarted={howitallstarted} 
@@ -21,7 +20,6 @@ export const AboutPageTemplate = ({
         vision={vision}
         values={values}
         />
-    </div>
   )
 }
 
