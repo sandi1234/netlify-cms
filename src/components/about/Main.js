@@ -6,6 +6,8 @@ const Main = (props) => {
     const {howitallstarted, mission, vision, values} = props;
   return (
     <>
+    This is about page
+
         <HowItAllStarted dataContent={howitallstarted}/>
         <Navigation 
             dataMission={mission}

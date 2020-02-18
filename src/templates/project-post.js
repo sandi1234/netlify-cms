@@ -4,34 +4,36 @@ import { graphql} from 'gatsby'
 // import styled from 'styled-components';
 import {Container} from "react-bootstrap"
 import Layout from '../components/Layout'
-// import Content, { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 import ProjectPostContent from '../components/projects/ProjectPostContent'
 
 
 export const ProjectPostTemplate = ({
+  content,
+  contentComponent,
   description,
   date,
-  // tags,
+  tags,
   title,
-  helmet,
 }) => {
-
   return (
     <ProjectPostContent 
       title={title}
       date={date}
+      tags={tags}
       description={description}
+      content={content}
+      contentComponent={contentComponent}
     />
   )
 }
 
 ProjectPostTemplate.propTypes = {
-  // content: PropTypes.node.isRequired,
-  // contentComponent: PropTypes.func,
+  content: PropTypes.node.isRequired,
+  contentComponent: PropTypes.func,
   description: PropTypes.string,
   date: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
 const ProjectPost = ({ data }) => {
@@ -41,11 +43,11 @@ const ProjectPost = ({ data }) => {
     <Layout>
     <Container className="bg-success">   
       <ProjectPostTemplate
-        //  content={Project.html}
+         content={Project.html}
          date={Project.frontmatter.date}
-        //  contentComponent={HTMLContent}
+         contentComponent={HTMLContent}
          description={Project.frontmatter.description}
-        //  tags={Project.frontmatter.tags}
+         tags={Project.frontmatter.tags}
          title={Project.frontmatter.title}
       />
       </Container>

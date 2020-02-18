@@ -19,8 +19,8 @@ CMS.registerPreviewTemplate('index', withStyledComponentsRendered(IndexPagePrevi
 CMS.registerPreviewTemplate('about', withStyledComponentsRendered(AboutPagePreview));
 CMS.registerPreviewTemplate('team', withStyledComponentsRendered(TeamPagePreview));
 CMS.registerPreviewTemplate('project', withStyledComponentsRendered(ProjectPostPreview));
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('products', ProductPagePreview);
+CMS.registerPreviewTemplate('blog', BlogPostPreview);
 
 function StyleInjector({ children }) {
   const [iframeRef, setIframeRef] = useState(null);
