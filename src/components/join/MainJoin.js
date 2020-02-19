@@ -1,85 +1,85 @@
 import React from "react"
-import { Row, Col, Container, Card, Button } from "react-bootstrap"
+import { Row, Col, Container, Card } from "react-bootstrap"
 // import arrowDown from "../../images/arrow-down-solid.svg"
 import styled from 'styled-components'
-import { faUsers, faHandshake } from "@fortawesome/free-solid-svg-icons"
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { Link } from 'gatsby'
+// import { faUsers, faHandshake } from "@fortawesome/free-solid-svg-icons"
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 
 
-const ContainerWrapper = styled(Container)`
-    text-align: center;
-    // transform: rotate(20deg);
-
-`
-
-
-const SvgImageWrapper = styled.div`
-    text-align: center;
-`
-
-// const TestTrol = styled(FontAwesomeIcon)`
-// font-size: 200px;
-// color: blue;
+// const ContainerWrapper = styled(Container)`
+//     text-align: center;
+//     // transform: rotate(20deg);
 // `
 
-const CustomCard = styled(Card)`
-    margin: 80px 0px 20px 0px;
-    height: 480px;
-    // box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-    background-color: #d8ecf3;
-    border: 0px solid black;
-    &:hover{
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    }
+const CustomCol = styled(Col)`
+&:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25) !important;
+}
+`
 
+const CustomCard = styled.div`
+    width: 100%;
+    margin: 80px 0px 80px 0px;
+    padding: 75px 0;
+    color: white;
+    height: 300px;
+    // box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    // &:hover{
+    //     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    // }
 `
 
 const SectionBackgroundColor = styled.div`
-width: 80%;
+width: 100%;
 margin:0 auto;
 background-color: skyblue;
-// transform: rotate(-20deg);
-border: 0px solid green;
-border-bottom-left-radius: 450px;
-border-bottom-right-radius: 450px;
-border-top-left-radius: 450px;
-border-top-right-radius: 450px;
-
 `
 
-const NextSection = styled.div`
+const BtnLink = styled(Link)`
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+color: white;
+display: block;
+width: 45%;
+// background-color: blue;
+border: 1px solid white;
+border-radius: 25px;
+padding: 15px 30px 15px 30px;
+text-decoration: none;
+&:hover{
+    color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+}
+`
+
+const CenterBtn = styled.div`
+    position: absolute;
     text-align: center;
-    margin: 50px 0px 0px 0px;
-    padding-bottom: 10px;
-
+    bottom: 20px;
+    width: 65%;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
 `
 
-// const ArrowDown = styled.img`
-//     width: 3%;
-//     position: relative;
-//     animation-name: example;
-//     animation-duration: 1s;
-//     animation-iteration-count: infinite;
+const Title = styled.h2`
+    text-align: center;
+    font-size: 36px;
+`
 
-//   @-webkit-keyframes example {
-//     0%   {top:0px;}
-//     75%  {top:10px;}
-//     100% {top:0px;}
-//   }
+const BodyText = styled.p`
+    font-size: 20px;
+`
 
-//   @keyframes example {
-//     0%   {top:0px;}
-//     75%  {top:10px;}
-//     100% {top:0px;}
-//   }
-  
-// `
-const IconWrapper = styled(FontAwesomeIcon)`
-    font-size: 200px;
-    color: #5cb85c;
-    margin-bottom: 10px;
-
+const CustomBody = styled.div`
+    padding: 15px;
 `
 
 
@@ -89,42 +89,42 @@ const MainJoin = (props) => {
 
     return (
     <SectionBackgroundColor>
-    <ContainerWrapper>
+    {/* <ContainerWrapper> */}
       <Row>
-        <Col lg={{span: 4, offset: 2 }} md={6} sm={12}>
+        <CustomCol lg={6} md={6} sm={12} className="pr-0 bg-success">
         <CustomCard>
-            <SvgImageWrapper>
-                 <IconWrapper icon={faUsers}  />
-            </SvgImageWrapper>
-            <Card.Body>
-                <Card.Title>{team.heading}</Card.Title>
-                <Card.Text>
+            <CustomBody>
+                <Title>{team.heading}</Title>
+                <BodyText>
                     {team.content}
-                </Card.Text>
-                    
-                <Button variant="primary">{team.btnText}</Button>
-            </Card.Body>
+                </BodyText>
+                <CenterBtn>
+                    <BtnLink to="#">
+                        {team.btnText}
+                    </BtnLink>
+                </CenterBtn>
+                {/* <Button variant="primary">{team.btnText}</Button> */}
+            </CustomBody>
         </CustomCard>
-        </Col>
-        <Col lg={4} md={6} sm={12}>
+        </CustomCol>
+        <CustomCol lg={6} md={6} sm={12} className="pl-0 bg-warning">
         <CustomCard>
-        <SvgImageWrapper>
-        <IconWrapper icon={faHandshake}  />
-            </SvgImageWrapper>
-            <Card.Body>
-                <Card.Title>{partner.heading}</Card.Title>
-                <Card.Text>
+            <CustomBody>
+                <Title>{partner.heading}</Title>
+                <BodyText>
                     {partner.content}
-                </Card.Text>
-                <Button variant="primary">{partner.btnText}</Button>
-            </Card.Body>
+                </BodyText>
+                <CenterBtn>
+                    <BtnLink to="#">
+                         {partner.btnText}
+                    </BtnLink>
+                </CenterBtn>
+                {/* <Button variant="primary">{partner.btnText}</Button> */}
+            </CustomBody>
         </CustomCard>
-        </Col>
+        </CustomCol>
       </Row>
-    </ContainerWrapper>
-    <NextSection>
-        {/* <ArrowDown src={arrowDown} /> */}
-    </NextSection>
+    {/* </ContainerWrapper> */}
     </SectionBackgroundColor>
 )
 

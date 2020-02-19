@@ -8,11 +8,19 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import MainJoin from '../components/join/MainJoin'
 import MainProjects from '../components/projects/MainProjects'
+import Flag from '../img/ugandan-flag.png'
 
 const LandingImage = styled.div`
 margin-top: -100px;
 height: 100vh;
 `
+
+const TestTrol = styled.div`
+width: 100%;
+height: 100vh;
+background: rgb(247,191,102);
+background: linear-gradient(90deg, rgba(247,191,102,0.9023984593837535) 0%, rgba(255,221,119,0.9304096638655462) 0%, rgba(242,190,107,0.8855917366946778) 100%);`
+
 
 const MainContentWrapper = styled(Container)`
   // Somthing Special
@@ -136,13 +144,13 @@ export const IndexPageTemplate = ({
     <LandingImage
       style={{
         backgroundImage: `url(${
-          !!mainIntro.image.childImageSharp ? mainIntro.image.childImageSharp.fluid.src : mainIntro.image
-        })`,
+          Flag})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center', 
         backgroundSize: "cover",
       }}
     >
+    <TestTrol>
     <MainContentWrapper className="h-100">
            <Row className="h-100 justify-content-center align-items-center">
               <Col lg={12} md={12} sm={12}>
@@ -150,7 +158,7 @@ export const IndexPageTemplate = ({
                   <SubHeading className="text-uppercase text-center mb-5">{mainIntro.subheading}</SubHeading>     
                   <Row className="justify-content-md-center">
                       <Col lg={6} md={6} sm={6} className="text-center">
-                          <ButtonLinkIntro to="#"className="text-uppercase"  variant="primary" size="lg" block>
+                          <ButtonLinkIntro to="#" className="text-uppercase"  variant="primary" size="lg" block>
                             {mainIntro.btnText}
                           </ButtonLinkIntro>
                       </Col>                 
@@ -158,6 +166,7 @@ export const IndexPageTemplate = ({
               </Col>
         </Row>
     </MainContentWrapper>
+        </TestTrol>
     </LandingImage>
     <Container>
       <Row>
