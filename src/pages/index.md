@@ -8,16 +8,21 @@ mainIntro:
   subheading: And be a part of the furture
 team:
   btnLink: Link
-  btnText: Button Text
-  content: This is the content torl
+  btnText: JOIN OUR TEAM
+  content: >-
+    Membership is open to the people of Busoga living in the Nordics, other
+    Basoga in the diasporas as well as friends of Busoga, individuals who would
+    like to be actively involved in making it possible for us to
   image: /img/apple-touch-icon.png
-  heading: This is a heading
+  heading: JOIN OUR TEAM
 partner:
   btnLink: Link
-  btnText: Button Text
-  content: This is the content
+  btnText: BUSINESS PARTNER
+  content: >-
+    Want to partner up us and support our mission to inspire and empower the
+    people of Busogo. Get in touch with us and together we shall make magic.
   image: /img/apple-touch-icon.png
-  heading: This is a heading
+  heading: BECOME A BUSINESS PARTNER
 whoweare:
   btnLink: about
   btnText: Learn More
