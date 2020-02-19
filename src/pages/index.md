@@ -19,12 +19,25 @@ partner:
   image: /img/apple-touch-icon.png
   heading: This is a heading
 whoweare:
+  btnLink: about
+  btnText: Learn More
+  col1: >-
+    We are an organization made up of people from the Busoga region, in Uganda,
+    who live and operate in the Nordic countries of Denmark, Sweden, Norway and
+    Finland. Our goal is to Inspire and empower the people of Busoga for
+    personal and regional sustainable development.
+  col2: >-
+    We want to ensure that the development – serves present and future
+    generations through good governance in decision making, planning and
+    implementation To reach this goal we focus on encouraging Economic,
+    Environmental and Social growth and integrity.
+  col3: >-
+    Emphasis is on – but not limited to - Agriculture, Health, Education, IT
+    skills, Technical skills, to help ensure job creation and promoting
+    Entrepreneurship among the youth and women. We wish to bridge the gapb
+    between Busoga, the Nordics and other parts of the world and enhance mutual
+    cultural exchange.
   image: /img/Fishing-boat-during-sunrise.jpg
-  btnLink: link
-  btnText: button
-  col1: col 1
-  col2: col 2
-  col3: col 3
   heading: Who We ARE
 image: /img/Fishing-boat-during-sunrise.jpg
 heading: Who we are
