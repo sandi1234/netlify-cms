@@ -61,6 +61,35 @@ text-decoration: none;
 }
 `
 
+const CenterBtn = styled.div`
+  margin: 20px auto;
+  width: 60%;
+
+`
+
+const WhoWeAreButton = styled(Link)`
+font-family: "FF Mark", Helvetica, Arial, sans-serif;
+font-size: 2.5vw;
+font-style: normal;
+font-weight: 600;
+color: black;
+display: block;
+width: 100%;
+// background-color: transparent;
+border: 1px solid black;
+border-radius: 5px;
+padding: 15px 30px 15px 30px;
+text-decoration: none;
+&:hover{
+    color: ghostwhite;
+    background-color: lightblue;
+}
+
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+}
+`
+
 const CustomCard = styled(Card)`
     margin: 40px 0px 40px 0px;
     // box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
@@ -149,9 +178,12 @@ export const IndexPageTemplate = ({
                     </Col>
                     <Col className="mb-3" lg={12} md={12} sm={12}>
                     {whoweare.col3}
-                    <ButtonLinkIntro to={whoweare.btnLink} className="text-uppercase text-center"  variant="primary" size="lg" block>
+                    <CenterBtn>
+                        <WhoWeAreButton to={whoweare.btnLink} className="text-uppercase text-center"  variant="primary" size="lg" block>
                         {whoweare.btnText}
-                    </ButtonLinkIntro>
+                    </WhoWeAreButton> 
+                    </CenterBtn>
+
                     </Col>
                     </Row>
                 </Card.Text>

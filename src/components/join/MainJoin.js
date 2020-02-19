@@ -1,12 +1,9 @@
 import React from "react"
 import { Row, Col, Container, Card, Button } from "react-bootstrap"
-// import team from "../../images/users-solid.svg"
-// import partner from "../../images/handshake-solid.svg"
 // import arrowDown from "../../images/arrow-down-solid.svg"
 import styled from 'styled-components'
-
-
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faUsers, faHandshake } from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 
 
@@ -78,12 +75,11 @@ const NextSection = styled.div`
 //   }
   
 // `
+const IconWrapper = styled(FontAwesomeIcon)`
+    font-size: 200px;
+    color: #5cb85c;
+    margin-bottom: 10px;
 
-const Image = styled.img`
-    width: 100%;
-    height: auto;
-    // transform: skew(180deg,190deg);
-    // transform: rotateY(20deg);
 `
 
 
@@ -98,8 +94,7 @@ const MainJoin = (props) => {
         <Col lg={{span: 4, offset: 2 }} md={6} sm={12}>
         <CustomCard>
             <SvgImageWrapper>
-                {/* <TestTrol icon={[preFix, faIconleft]}/> */}
-                <Image src={!!team.image.childImageSharp ? team.image.childImageSharp.fluid.src : team.image} alt="Something" />
+                 <IconWrapper icon={faUsers}  />
             </SvgImageWrapper>
             <Card.Body>
                 <Card.Title>{team.heading}</Card.Title>
@@ -114,9 +109,7 @@ const MainJoin = (props) => {
         <Col lg={4} md={6} sm={12}>
         <CustomCard>
         <SvgImageWrapper>
-        <Image src={!!partner.image.childImageSharp ? partner.image.childImageSharp.fluid.src : partner.image} alt="Something" />
-
-                {/* <TestTrol icon={[preFix, faIconright]}/> */}
+        <IconWrapper icon={faHandshake}  />
             </SvgImageWrapper>
             <Card.Body>
                 <Card.Title>{partner.heading}</Card.Title>
