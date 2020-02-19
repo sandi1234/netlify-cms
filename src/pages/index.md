@@ -43,7 +43,7 @@ whoweare:
     between Busoga, the Nordics and other parts of the world and enhance mutual
     cultural exchange.
   image: /img/Fishing-boat-during-sunrise.jpg
-  heading: Who We ARE
+  heading: Welcome to Busoga Nordic
 image: /img/Fishing-boat-during-sunrise.jpg
 heading: Who we are
 subheading: And be a part of the furture
