@@ -174,6 +174,7 @@ export const IndexPageTemplate = ({
   whoweare,
   team,
   partner,
+  testimonials,
   mainpitch,
   description,
   intro,
@@ -352,6 +353,7 @@ IndexPageTemplate.propTypes = {
   whoweare: PropTypes.object,
   team: PropTypes.object,
   partner: PropTypes.object,
+  testimonials: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -373,6 +375,7 @@ const IndexPage = ({ data }) => {
         whoweare={frontmatter.whoweare}
         team={frontmatter.team}
         partner={frontmatter.partner}
+        testimonials={frontmatter.testimonials}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -453,6 +456,18 @@ export const pageQuery = graphql`
           content
           btnText
           btnLink
+        }
+        # Testimonials
+        testimonials{
+          image{
+              childImageSharp {
+              fluid(maxWidth: 300, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          quote
+          author
         }
         # Something
         image {

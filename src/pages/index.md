@@ -23,6 +23,17 @@ partner:
     people of Busogo. Get in touch with us and together we shall make magic.
   image: /img/apple-touch-icon.png
   heading: BECOME A BUSINESS PARTNER
+testimonials:
+  - author: Elisabeth Kaurismäki
+    image: /img/apple-touch-icon.png
+    quote: >-
+      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
+      the same thing I’ve been drinking every morning.
+  - author: Philipp Trommler
+    image: /img/apple-touch-icon.png
+    quote: >-
+      Kaldi is the place to go if you want the best quality coffee. I love their
+      stance on empowering farmers and transparency.
 whoweare:
   btnLink: about
   btnText: Learn More
