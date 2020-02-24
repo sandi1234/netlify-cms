@@ -34,6 +34,11 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
+  - author: Anders And
+    image: /img/apple-touch-icon.png
+    quote: >-
+      Kaldi is the place to go if you want the best quality coffee. I love their
+      stance on empowering farmers and transparency.
 whoweare:
   btnLink: about
   btnText: Learn More
