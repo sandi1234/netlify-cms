@@ -431,13 +431,13 @@ export const pageQuery = graphql`
         }
         # Team
         team{
-          image{
-              childImageSharp {
-              fluid(maxWidth: 300, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          # image{
+          #     childImageSharp {
+          #     fluid(maxWidth: 300, quality: 100) {
+          #       ...GatsbyImageSharpFluid
+          #     }
+          #   }
+          # }
           heading
           content
           btnText
@@ -445,13 +445,13 @@ export const pageQuery = graphql`
         }
         # Partner
         partner{
-          image{
-              childImageSharp {
-              fluid(maxWidth: 300, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          # image{
+          #     childImageSharp {
+          #     fluid(maxWidth: 300, quality: 100) {
+          #       ...GatsbyImageSharpFluid
+          #     }
+          #   }
+          # }
           heading
           content
           btnText
@@ -459,13 +459,13 @@ export const pageQuery = graphql`
         }
         # Testimonials
         testimonials{
-          image{
-              childImageSharp {
-              fluid(maxWidth: 300, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          # image{
+          #     childImageSharp {
+          #     fluid(maxWidth: 300, quality: 100) {
+          #       ...GatsbyImageSharpFluid
+          #     }
+          #   }
+          # }
           quote
           author
         }
