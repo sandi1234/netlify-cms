@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Container, Card } from "react-bootstrap"
+import { Row, Col} from "react-bootstrap"
 // import arrowDown from "../../images/arrow-down-solid.svg"
 import styled from 'styled-components'
 import { Link } from 'gatsby'

@@ -8,7 +8,10 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import MainJoin from '../components/join/MainJoin'
 import MainProjects from '../components/projects/MainProjects'
+import Testimonials from '../components/home/Testimonials'
 import Flag from '../img/ugandan-flag.png'
+import { faUsers, faHandshake, faProjectDiagram, faDonate} from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const LandingImage = styled.div`
 margin-top: -100px;
@@ -18,8 +21,10 @@ height: 100vh;
 const TestTrol = styled.div`
 width: 100%;
 height: 100vh;
-background: rgb(247,191,102);
-background: linear-gradient(90deg, rgba(247,191,102,0.9023984593837535) 0%, rgba(255,221,119,0.9304096638655462) 0%, rgba(242,190,107,0.8855917366946778) 100%);`
+background: rgb(232,212,123);
+background: radial-gradient(circle, rgba(232,212,123,1) 0%, rgba(231,129,50,0.938813025210084) 35%, rgba(25,25,23,1) 100%);// background: rgb(247,191,102);
+// background: linear-gradient(90deg, rgba(247,191,102,0.9023984593837535) 0%, rgba(255,221,119,0.9304096638655462) 0%, rgba(242,190,107,0.8855917366946778) 100%);
+`
 
 
 const MainContentWrapper = styled(Container)`
@@ -70,27 +75,31 @@ text-decoration: none;
 `
 
 const CenterBtn = styled.div`
-  margin: 20px auto;
+  margin: 40px auto;
   width: 60%;
 
 `
 
 const WhoWeAreButton = styled(Link)`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 2.5vw;
+font-size: 30px;
 font-style: normal;
 font-weight: 600;
-color: black;
+color: white;
 display: block;
 width: 100%;
-// background-color: transparent;
-border: 1px solid black;
-border-radius: 5px;
+background-color: green;
+border: 0px solid black;
+border-radius: 45px;
 padding: 15px 30px 15px 30px;
 text-decoration: none;
 &:hover{
-    color: ghostwhite;
-    background-color: lightblue;
+    color: white;
+    // background: rgb(40,167,69);
+    // background: linear-gradient(90deg, rgba(40,167,69,1) 25%, rgba(255,193,7,1) 75%);
+    // background: rgb(124,251,63);
+    // background: radial-gradient(circle, rgba(124,251,63,1) 0%, rgba(252,244,70,1) 100%);
+    background: darkgreen;
 }
 
 &:focus, &:hover, &:visited, &:link, &:active {
@@ -99,32 +108,61 @@ text-decoration: none;
 `
 
 const CustomCard = styled(Card)`
-    margin: 40px 0px 40px 0px;
+    margin: 42px 0px 40px 0px;
+    font-size: 22px;
     // box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
     // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    border: 0px solid black;
+    border: 0px solid black !important;
     border-radius: 0px;
 
 `
 
 const Heading = styled.h1`
 text-transform: uppercase;
-font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 3rem;
+// font-family: "FF Mark", Helvetica, Arial, sans-serif;
+font-size: 40px;
 font-style: normal;
 font-weight: 600;
-letter-spacing: -0.03125em;
 line-height: 1.06;
 color: black;
-text-align: center;
+// text-align: center;
 padding: 20px 0px 10px 0px;
 `
 
-const Image = styled.img`
-    width: 100%;
-    height: auto;
-    // transform: skew(180deg,190deg);
-    // transform: rotateY(20deg);
+// const Image = styled.img`
+//     width: 100%;
+//     height: auto;
+//     // transform: skew(180deg,190deg);
+//     // transform: rotateY(20deg);
+// `
+
+const CustomBox= styled.div`
+  // margin-top: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 10px;
+`
+
+
+const CustomBoxWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+`
+
+const CustomBoxIcon = styled(FontAwesomeIcon)`
+  width: 100%;
+  font-size: 75px;
+
+`
+
+const CustomBoxNumber = styled.div`
+  width: 100%;
+`
+
+const CustomBoxText = styled.div`
+  width: 100%;
+  text-transform: uppercase;
 `
 
 export const IndexPageTemplate = ({
@@ -187,25 +225,73 @@ export const IndexPageTemplate = ({
                     </Col>
                     <Col className="mb-3" lg={12} md={12} sm={12}>
                     {whoweare.col3}
+
                     <CenterBtn>
                         <WhoWeAreButton to={whoweare.btnLink} className="text-uppercase text-center"  variant="primary" size="lg" block>
                         {whoweare.btnText}
                     </WhoWeAreButton> 
                     </CenterBtn>
-
                     </Col>
                     </Row>
                 </Card.Text>
             </Card.Body>
             </Col>
             <Col lg={4} md={6} sm={12}>
-          <Image src={!!whoweare.image.childImageSharp ? whoweare.image.childImageSharp.fluid.src : whoweare.image} alt="Something"/>
+          {/* <Image src={!!whoweare.image.childImageSharp ? whoweare.image.childImageSharp.fluid.src : whoweare.image} alt="Something"/> */}
+          <CustomBoxWrapper className="mt-4">
+            <CustomBox>
+            <CustomBoxIcon icon={faUsers} />
+            <CustomBoxNumber>
+                 5
+            </CustomBoxNumber>
+            <CustomBoxText>
+              Team Members
+            </CustomBoxText>
+          </CustomBox>
+          </CustomBoxWrapper>
+          <CustomBoxWrapper>
+            <CustomBox>
+            <CustomBoxIcon icon={faHandshake} />
+            <CustomBoxNumber>
+                 5
+            </CustomBoxNumber>
+            <CustomBoxText>
+              Business Partners
+            </CustomBoxText>
+          </CustomBox>
+          </CustomBoxWrapper>
+          <CustomBoxWrapper>
+            <CustomBox>
+            <CustomBoxIcon icon={faProjectDiagram} />
+            <CustomBoxNumber>
+                 5
+            </CustomBoxNumber>
+            <CustomBoxText>
+              Projects
+            </CustomBoxText>
+          </CustomBox>
+          </CustomBoxWrapper>
+
+          <CustomBoxWrapper>
+            <CustomBox>
+            <CustomBoxIcon icon={faDonate} />
+            <CustomBoxNumber>
+                 $67000
+            </CustomBoxNumber>
+            <CustomBoxText>
+              Donation
+            </CustomBoxText>
+          </CustomBox>
+          </CustomBoxWrapper>
+
+ 
         </Col>
         </Row>
     </CustomCard>
       </Row>
     </Container>
     <MainJoin  team={team} partner={partner}/>
+    <Testimonials testimonials={testimonials} />
     <MainProjects />
     <section className="section section--gradient">
       <div className="container">
