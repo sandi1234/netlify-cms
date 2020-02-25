@@ -10,22 +10,27 @@ const Wrapper = styled.div`
     width: 100%;
     height: 50vh;
     padding: 4%;
-    background-color: #ccc;;
+    background-color: deepskyblue;;
 `
 
 const CustomCard = styled.article`
     width: 300px;
     height: auto;
     padding: 15px;
-    background-color: white;
+    color: white;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    border: 2px solid white;
 `
 
 const CustomBody = styled.div`
+
 
 `
 const CustomQuote = styled(FontAwesomeIcon)`
     font-size: 30px;
     margin-bottom: 15px;
+    color: white;
 `
 
 const CustomAuthor = styled.div`
@@ -35,12 +40,23 @@ const CustomAuthor = styled.div`
 const Heading = styled.h2`
     // text-align: center;
     font-size: 40px;
+    color: white;
+
 `
 
 const SubHeading = styled.h3`
     // text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
+    color: white;
+`
+
+const CustomHr = styled.div`
+    width: 10%;
+    color:white;
+    border: 4px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px; 
 `
 
 
@@ -49,10 +65,11 @@ const Testimonials = ({ testimonials }) => (
     <Container>
         <Heading> Testimonials</Heading>
         <SubHeading> What They say</SubHeading>
+        <CustomHr />
         <Row>
             {testimonials.map(testimonial => (
             <Col lg={4} md={4} sm={12}>
-                    <CustomCard key={v4()} className="message">
+                    <CustomCard key={v4()}>
                         <CustomQuote icon={faQuoteRight} />
                         <CustomBody>
                         {testimonial.quote}

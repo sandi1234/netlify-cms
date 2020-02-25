@@ -4,11 +4,12 @@ import { Link, graphql } from 'gatsby'
 import { Container, Row, Col, Card } from "react-bootstrap"
 import styled from 'styled-components';
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+// import Features from '../components/Features'
+// import BlogRoll from '../components/BlogRoll'
 import MainJoin from '../components/join/MainJoin'
-import MainProjects from '../components/projects/MainProjects'
+// import MainProjects from '../components/projects/MainProjects'
 import Testimonials from '../components/home/Testimonials'
+import TimeLine from '../components/home/TimeLine'
 import Flag from '../img/ugandan-flag.png'
 import { faUsers, faHandshake, faProjectDiagram, faDonate} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -291,10 +292,11 @@ export const IndexPageTemplate = ({
     </CustomCard>
       </Row>
     </Container>
+    <TimeLine timeLine="This is the timeline"/>
     <MainJoin  team={team} partner={partner}/>
     <Testimonials testimonials={testimonials} />
-    <MainProjects />
-    <section className="section section--gradient">
+    {/* <MainProjects /> */}
+    {/* <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
@@ -340,7 +342,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
   </>
 )
 
