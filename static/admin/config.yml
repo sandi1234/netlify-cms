@@ -55,8 +55,10 @@ collections:
           - {label: Timeline, name: timeLine, widget: object, fields: [
               {label: Heading, name: heading, widget: string}, 
               {label: SubHeading, name: subHeading, widget: string}, 
-              {label: Year, name: year, widget: string}, 
-              {label: Content, name: content, widget: string} 
+              {label: Timeline, name: contentTimeLine, widget: list, fields: [
+                {label: Year, name: year, widget: string}, 
+                {label: Content, name: content, widget: string} 
+                ]}
               ]}
           - {label: Partner, name: partner, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Heading, name: heading, widget: string}, {label: Content, name: content, widget: text}, {label: ButtonText, name: btnText, widget: string}, {label: Button Link, name: btnLink, widget: string}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [

@@ -34,7 +34,7 @@ text-align: center;
 font-weight: 600;
 `
 
-const TimeLine = (props) => {
+const TimeLine = ({timeLine}) => {
     const {timeLine} = props;
      return(
         <Wrapper>

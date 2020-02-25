@@ -171,6 +171,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
+  timeLine,
   mainIntro,
   whoweare,
   team,
@@ -292,7 +293,7 @@ export const IndexPageTemplate = ({
     </CustomCard>
       </Row>
     </Container>
-    <TimeLine timeLine="This is the timeline"/>
+    <TimeLine timeLine={timeLine} />
     <MainJoin  team={team} partner={partner}/>
     <Testimonials testimonials={testimonials} />
     {/* <MainProjects /> */}
@@ -353,6 +354,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainIntro: PropTypes.object,
   whoweare: PropTypes.object,
+  timeLine: PropTypes.object,
   team: PropTypes.object,
   partner: PropTypes.object,
   testimonials: PropTypes.object,
@@ -375,6 +377,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainIntro={frontmatter.mainIntro}
         whoweare={frontmatter.whoweare}
+        timeLine={frontmatter.timeLine}
         team={frontmatter.team}
         partner={frontmatter.partner}
         testimonials={frontmatter.testimonials}
@@ -430,6 +433,16 @@ export const pageQuery = graphql`
           heading
           btnText
           btnLink
+        }
+        # Timeline
+        timeLine{
+          Heading
+          subHeading
+          contentTimeLine{
+            year
+            content
+          }
+    
         }
         # Team
         team{
