@@ -55,7 +55,7 @@ collections:
           - {label: Timeline, name: timeLine, widget: object, fields: [
               {label: Heading, name: heading, widget: string}, 
               {label: SubHeading, name: subHeading, widget: string}, 
-              {label: Timeline, name: contentTimeLine, widget: list, fields: [
+              {label: Content Timeline, name: contentTimeLine, widget: list, fields: [
                 {label: Year, name: year, widget: string}, 
                 {label: Content, name: content, widget: string} 
                 ]}

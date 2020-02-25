@@ -35,10 +35,9 @@ font-weight: 600;
 `
 
 const TimeLine = ({timeLine}) => {
-    const {timeLine} = props;
      return(
         <Wrapper>
-        <Heading>{timeLine}</Heading>
+        <Heading>trol</Heading>
         <SubHeading>2014 ---------- 2020</SubHeading>
         <Year>2014</Year>
         <TimeLineContent>started the bunda organasitation</TimeLineContent>
