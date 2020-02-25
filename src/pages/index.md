@@ -15,6 +15,18 @@ team:
     like to be actively involved in making it possible for us to
   image: /img/apple-touch-icon.png
   heading: JOIN OUR TEAM
+timeLine:
+  contentTimeLine:
+    - content: Started bunda
+      year: '2014'
+    - content: Some new thing
+      year: '2014'
+    - content: This is a newer thing
+      year: '2015'
+    - content: Lorem ipsum
+      year: '2016'
+  heading: Our Timeline
+  subHeading: 2014 --------- 2020
 partner:
   btnLink: Link
   btnText: BUSINESS PARTNER
