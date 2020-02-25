@@ -75,6 +75,12 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
+timeLine:
+  heading: Our Timeline
+  subHeading: 2014 -------- 2020 
+  contentTimeLine:
+    year: 2014
+    content: lorem ipsum
 intro:
   blurbs:
     - image: /img/coffee.png

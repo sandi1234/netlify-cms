@@ -436,7 +436,7 @@ export const pageQuery = graphql`
         }
         # Timeline
         timeLine{
-          Heading
+          heading
           subHeading
           contentTimeLine{
             year
