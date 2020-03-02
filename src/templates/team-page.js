@@ -17,6 +17,10 @@ const GroupeImage = styled(Image)`
   width: 100%;
 `
 
+const CustomFont = styled(FontAwesomeIcon)`
+  width: 13%
+`
+
 
 function Member(props){
   const {member} = props;
@@ -32,8 +36,8 @@ function Member(props){
         </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem><FontAwesomeIcon icon={faMobileAlt} /> {member.phone}</ListGroupItem>
-          <ListGroupItem><FontAwesomeIcon icon={faEnvelope} />  {member.mail}</ListGroupItem>
+          <ListGroupItem><CustomFont icon={faMobileAlt} /> {member.phone}</ListGroupItem>
+          <ListGroupItem><CustomFont icon={faEnvelope} />  {member.mail}</ListGroupItem>
         </ListGroup>
       </Card>
     </Col>

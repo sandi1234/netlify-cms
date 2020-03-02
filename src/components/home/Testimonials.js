@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Row, Col, Container} from "react-bootstrap"
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { v4 } from 'uuid'
+// import { v4 } from 'uuid'
 
 const Wrapper = styled.div`
     width: 100%;
@@ -28,7 +28,7 @@ const CustomBody = styled.div`
 
 `
 const CustomQuote = styled(FontAwesomeIcon)`
-    font-size: 30px;
+    width: 13%;
     margin-bottom: 15px;
     color: white;
 `
@@ -60,16 +60,20 @@ const CustomHr = styled.div`
 `
 
 
-const Testimonials = ({ testimonials }) => (
-  <Wrapper>
+const Testimonials = ({testimonials}) => {
+    
+    // const {testimonials} = props;
+
+    return(
+         <Wrapper>
     <Container>
         <Heading> Testimonials</Heading>
         <SubHeading> What They say</SubHeading>
         <CustomHr />
         <Row>
-            {testimonials.map(testimonial => (
-            <Col lg={4} md={4} sm={12}>
-                    <CustomCard key={v4()}>
+            {testimonials.map((testimonial, index) => (
+            <Col key={index} lg={4} md={4} sm={12}>
+                    <CustomCard >
                         <CustomQuote icon={faQuoteRight} />
                         <CustomBody>
                         {testimonial.quote}
@@ -81,8 +85,10 @@ const Testimonials = ({ testimonials }) => (
                 ))}     
         </Row>
     </Container>
-  </Wrapper>
-)
+  </Wrapper> 
+    )
+
+}
 
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(

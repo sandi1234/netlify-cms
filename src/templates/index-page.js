@@ -14,6 +14,7 @@ import Testimonials from '../components/home/Testimonials'
 import { faUsers, faHandshake, faProjectDiagram, faDonate} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 // import Lort from '../img/bg.jpg'
+import Brige from '../img/jinja-bridge.png'
 
 const LandingImage = styled.div`
 margin-top: -100px;
@@ -23,8 +24,8 @@ height: 100vh;
 const TestTrol = styled.div`
 width: 100%;
 height: 100vh;
-background: rgb(0,0,255);
-background: linear-gradient(146deg, rgba(0,0,255,1) 0%, rgba(255,255,0,1) 56%, rgba(128,0,0,1) 93%);
+background: rgba(0,0,0, 0.5);
+// background: linear-gradient(146deg, rgba(0,0,255,1) 0%, rgba(255,255,0,1) 56%, rgba(128,0,0,1) 93%);
 // background: rgba(232,212,123, 0.6);
 // background: rgb(232,212,123);
 // background: radial-gradient(circle, rgba(232,212,123,1) 0%, rgba(231,129,50,0.938813025210084) 35%, rgba(25,25,23,1) 100%);// background: rgb(247,191,102);
@@ -187,13 +188,13 @@ export const IndexPageTemplate = ({
 }) => (
   <>
     <LandingImage
-      // style={{
-      //   backgroundImage: `url(${
-      //     Lort})`,
-      //   backgroundRepeat: 'no-repeat',
-      //   backgroundPosition: 'center center', 
-      //   backgroundSize: "cover",
-      // }}
+      style={{
+        backgroundImage: `url(${
+          Brige})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center', 
+        backgroundSize: "cover",
+      }}
     >
     <TestTrol>
     <MainContentWrapper className="h-100">
