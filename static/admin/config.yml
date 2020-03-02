@@ -1,6 +1,10 @@
 backend:
-  name: github
-  repo: sandi1234/netlify-cms
+  # name: github
+  # repo: sandi1234/netlify-cms
+  name: git-gateway
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
   branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
