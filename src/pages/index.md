@@ -3,7 +3,7 @@ templateKey: index-page
 title: Busoga Nordic
 mainIntro:
   btnText: Get Involved
-  image: /img/Fishing-boat-during-sunrise.jpg
+  image: /img/jinja-bridge.png
   heading: Inspire to do more
   subheading: And be a part of the furture
 team:
@@ -139,3 +139,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
