@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Main from '../components/about/main'
+import Main from '../components/about/Main'
 import Layout from '../components/Layout'
 
 export const AboutPageTemplate = ({
