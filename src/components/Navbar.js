@@ -20,13 +20,14 @@ const Menu = class extends React.Component {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
+          <Link className="navbar-item" to="/">Home</Link>
           <Link className="navbar-item" to="/about">About</Link>
           <Link className="navbar-item" to="/team">Team</Link>
           <Link className="navbar-item" to="/projects">Projects</Link>
-          <Link className="navbar-item" to="/products">Products</Link>
-          <Link className="navbar-item" to="/blog">Blog</Link>
+          {/* <Link className="navbar-item" to="/products">Products</Link> */}
+          {/* <Link className="navbar-item" to="/blog">Blog</Link> */}
           <Link className="navbar-item" to="/contact">Contact</Link>
-          <Link className="navbar-item" to="/contact/examples">Form Example</Link>
+          {/* <Link className="navbar-item" to="/contact/examples">Form Example</Link> */}
         </Nav>
       </Navbar.Collapse>
   </Container>

@@ -2,10 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import {Row, Col, Container, ListGroup, ListGroupItem, Card} from "react-bootstrap"
+import {Row, Col, Container, ListGroup, ListGroupItem, Card, Image} from "react-bootstrap"
 import { faMobileAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import groupImage from '../img/group-image.jpg'
+import styled from 'styled-components'
 
+
+const Wrapper = styled.div`
+  margin: 100px 0px 100px 0px;
+`
+
+const GroupeImage = styled(Image)`
+  width: 100%;
+`
 
 
 function Member(props){
@@ -34,15 +44,15 @@ export const TeamPageTemplate = ({
   title,
   teammembers
 }) => (
-    <>
-    <Container>
+    <Wrapper>
+      <Container>
       <Row>
          {teammembers.members.map((member, index) => (
             <Member key={index} member={member} />
           ))} 
        </Row>
-    </Container>
-    </>
+      </Container>
+    </Wrapper>
   )
 
 TeamPageTemplate.propTypes = {
@@ -56,6 +66,7 @@ const TeamPage = ({ data }) => {
 
   return (
     <Layout>
+        <GroupeImage src={groupImage} alt="group image" />
       <TeamPageTemplate
         title={frontmatter.title}
         teammembers={frontmatter.teammembers}

@@ -62,6 +62,7 @@ const Navigation = (props) => {
     const {dataMission, dataVision, dataValues } = props;
 
     return (
+        <>
     <CustomContainer className="mt-5">
         <Tabs defaultActiveKey={dataMission.title} transition={false} id="noanim-tab-example">
         <Tab eventKey={dataMission.title} title={dataMission.title}>
@@ -74,7 +75,38 @@ const Navigation = (props) => {
           <Values values={dataValues} />
         </Tab>
       </Tabs>
+    {/* <Tab.Container defaultActiveKey="mission">
+  <Row>
+    <Col sm={3}>
+      <Nav variant="pills" className="flex-column">
+        <Nav.Item>
+          <Nav.Link eventKey="mission">Mission</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="vision">Vision</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="values">Values</Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </Col>
+    <Col sm={9}>
+      <Tab.Content>
+        <Tab.Pane eventKey="mission">
+            <Mission mission={dataMission} />
+        </Tab.Pane>
+        <Tab.Pane eventKey="vision">
+            <Vision vision={dataVision} />
+        </Tab.Pane>
+        <Tab.Pane eventKey="values">
+            <Values values={dataValues} />
+        </Tab.Pane>
+      </Tab.Content>
+    </Col>
+  </Row>
+</Tab.Container> */}
     </CustomContainer>
+    </>
     );
 }
 
