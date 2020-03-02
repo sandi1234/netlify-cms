@@ -80,6 +80,9 @@ function ProjectLeft(props) {
 
 function ProjectRight(props) {
   const {project} = props;
+  // const testTrol = truncate(project.frontmatter.title, 10);
+
+  
   return(
     <Col lg={6} md={6} sm={12} className="mb-5">
     <CustomRow key={project.id}>
