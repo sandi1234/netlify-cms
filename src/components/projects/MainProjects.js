@@ -64,7 +64,7 @@ function ProjectLeft(props) {
       <Col lg={6} md={6} sm={12} className="mb-5">
       <CustomRow key={project.id}>
           <Col lg={6} md={6} sm={12} className="pl-0">
-            <Image src="https://via.placeholder.com/150" alt="Testing" />
+            <Image src={!! project.frontmatter.featuredimage ? project.frontmatter.featuredimage.childImageSharp.fluid.src : project} alt={project.frontmatter.title} />
           </Col>
           <Col lg={6} md={6} sm={12}>
             <Title>{project.frontmatter.title}</Title>
@@ -91,7 +91,7 @@ function ProjectRight(props) {
             </LearnMore>
         </Col>
         <Col lg={6} md={6} sm={12} className="pr-0">
-            <Image src="https://via.placeholder.com/150" alt="Testing" />
+            <Image src={!! project.frontmatter.featuredimage ? project.frontmatter.featuredimage.childImageSharp.fluid.src : project} alt={project.frontmatter.title} />
         </Col>
     </CustomRow>
 </Col>
@@ -157,7 +157,7 @@ MainProjects.propTypes = {
                   featuredpost
                   featuredimage {
                     childImageSharp {
-                      fluid(maxWidth: 120, quality: 100) {
+                      fluid(maxWidth: 300, quality: 100) {
                         ...GatsbyImageSharpFluid
                       }
                     }
