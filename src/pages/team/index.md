@@ -1,6 +1,7 @@
 ---
 templateKey: team-page
 title: Team
+groupImage: /img/group-image.jpg
 teammembers:
   members:
     - description: Chairman Description
