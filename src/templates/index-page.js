@@ -22,14 +22,12 @@ height: 100vh;
 `
 
 const TestTrol = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 width: 100%;
 height: 100vh;
 background: rgba(0,0,0, 0.5);
-// background: linear-gradient(146deg, rgba(0,0,255,1) 0%, rgba(255,255,0,1) 56%, rgba(128,0,0,1) 93%);
-// background: rgba(232,212,123, 0.6);
-// background: rgb(232,212,123);
-// background: radial-gradient(circle, rgba(232,212,123,1) 0%, rgba(231,129,50,0.938813025210084) 35%, rgba(25,25,23,1) 100%);// background: rgb(247,191,102);
-// background: linear-gradient(90deg, rgba(247,191,102,0.9023984593837535) 0%, rgba(255,221,119,0.9304096638655462) 0%, rgba(242,190,107,0.8855917366946778) 100%);
 `
 
 
@@ -45,6 +43,14 @@ font-weight: 900;
 letter-spacing: -0.03125em;
 line-height: 1.06;
 color: white;
+
+@media (max-width: 768px) {
+  font-size: 7vw;
+  font-weight: 800;
+
+}
+
+
 `
 
 const SubHeading = styled.h2`
@@ -55,20 +61,31 @@ font-weight: 900;
 letter-spacing: -0.03125em;
 line-height: 1.06;
 color: white;
+@media (max-width: 768px) {
+  font-size: 4.5vw;
+  font-weight: 800;
+
+}
+`
+
+const MainButtonRow = styled(Row)`
+display: flex;
+justify-content: center;
+text-align: center;
 `
 
 const ButtonLinkIntro = styled(Link)`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 3vw;
+font-size: 2.7vw;
 font-style: normal;
 font-weight: 600;
 color: white;
 display: block;
-width: 100%;
+width: 40%;
 background-color: transparent;
 border: 1px solid white;
-border-radius: 5px;
-padding: 15px 30px 15px 30px;
+border-radius: 30px;
+padding: 10px 20px 10px 20px;
 text-decoration: none;
 &:hover{
     color: ghostwhite;
@@ -77,6 +94,12 @@ text-decoration: none;
 
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  width: 50%;
+  font-size: 3.5vw;
+  font-weight: 700;
 }
 `
 
@@ -147,10 +170,16 @@ const CustomBox= styled.div`
   width: 80%;
   border: 1px solid #ccc;
   padding: 10px;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `
 
 
 const CustomBoxWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
   text-align: center;
   padding: 10px;
@@ -197,18 +226,16 @@ export const IndexPageTemplate = ({
       }}
     >
     <TestTrol>
-    <MainContentWrapper className="h-100">
-           <Row className="h-100 justify-content-center align-items-center">
+    <MainContentWrapper>
+           <Row>
               <Col lg={12} md={12} sm={12}>
                   <MainHeading className="text-uppercase text-center">{mainIntro.heading}</MainHeading>     
                   <SubHeading className="text-uppercase text-center mb-5">{mainIntro.subheading}</SubHeading>     
-                  <Row className="justify-content-md-center">
-                      <Col lg={6} md={6} sm={6} className="text-center">
+                  <MainButtonRow>
                           <ButtonLinkIntro to="#" className="text-uppercase"  variant="primary" size="lg" block>
                             {mainIntro.btnText}
                           </ButtonLinkIntro>
-                      </Col>                 
-                  </Row>
+                  </MainButtonRow>
               </Col>
         </Row>
     </MainContentWrapper>
@@ -225,10 +252,10 @@ export const IndexPageTemplate = ({
             </Heading>
                 <Card.Text>
                 <Row>
-                    <Col className="mb-3" lg={6} md={6} sm={12}>
+                    <Col className="mb-3" lg={6} md={12} sm={12}>
                     {whoweare.col1}
                     </Col>
-                    <Col className="mb-3" lg={6} md={6} sm={12}>
+                    <Col className="mb-3" lg={6} md={12} sm={12}>
                     {whoweare.col2}
                     </Col>
                     <Col className="mb-3" lg={12} md={12} sm={12}>

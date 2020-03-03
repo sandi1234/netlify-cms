@@ -1,17 +1,7 @@
 import React from "react"
 import { Row, Col} from "react-bootstrap"
-// import arrowDown from "../../images/arrow-down-solid.svg"
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-// import { faUsers, faHandshake } from "@fortawesome/free-solid-svg-icons"
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-
-
-
-// const ContainerWrapper = styled(Container)`
-//     text-align: center;
-//     // transform: rotate(20deg);
-// `
 
 const CustomCol = styled(Col)`
 &:hover{
@@ -43,7 +33,7 @@ font-style: normal;
 font-weight: 600;
 color: white;
 display: block;
-width: 45%;
+// width: 45%;
 // background-color: blue;
 border: 1px solid white;
 border-radius: 25px;
