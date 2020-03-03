@@ -9,6 +9,7 @@ const TeamPagePreview = ({ entry, getAsset }) => {
     return (
       <TeamPageTemplate
         title={data.title}
+        groupImage={data.groupImage}
         teammembers={data.teammembers || {}}
       />
     )
