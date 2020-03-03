@@ -8,7 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const Wrapper = styled.div`
     width: 100%;
-    height: 50vh;
+    height: auto;
     padding: 4%;
     background-color: deepskyblue;
 `
@@ -17,6 +17,7 @@ const CustomCard = styled.article`
     width: 300px;
     height: auto;
     padding: 15px;
+    margin-top: 15px; 
     color: white;
     background-color: deepskyblue;
     border-radius: 5px;
@@ -59,6 +60,12 @@ const CustomHr = styled.div`
     margin-bottom: 20px; 
 `
 
+const CustomRow = styled(Row)`
+// @media (max-width: 768px) {
+//     text-align: center;
+//   }
+`
+
 
 const Testimonials = ({testimonials}) => {
     
@@ -70,9 +77,9 @@ const Testimonials = ({testimonials}) => {
         <Heading> Testimonials</Heading>
         <SubHeading> What They say</SubHeading>
         <CustomHr />
-        <Row>
+        <CustomRow>
             {testimonials.map((testimonial, index) => (
-            <Col key={index} lg={4} md={4} sm={12}>
+            <Col key={index} lg={4} md={6} sm={12}>
                     <CustomCard >
                         <CustomQuote icon={faQuoteRight} />
                         <CustomBody>
@@ -83,7 +90,7 @@ const Testimonials = ({testimonials}) => {
                     </CustomCard>
             </Col>
                 ))}     
-        </Row>
+        </CustomRow>
     </Container>
   </Wrapper> 
     )

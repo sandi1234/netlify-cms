@@ -14,7 +14,7 @@ const CustomCard = styled.div`
     margin: 80px 0px 80px 0px;
     padding: 75px 0;
     color: white;
-    height: 300px;
+    min-height: 270px;
     // box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
     // &:hover{
     //     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
@@ -33,7 +33,7 @@ font-style: normal;
 font-weight: 600;
 color: white;
 display: block;
-// width: 45%;
+width: 40%;
 // background-color: blue;
 border: 1px solid white;
 border-radius: 25px;
@@ -50,13 +50,19 @@ text-decoration: none;
 `
 
 const CenterBtn = styled.div`
+    display: flex;
+    justify-content: center;
     position: absolute;
     text-align: center;
-    bottom: 20px;
-    width: 65%;
-    right:25%;
-    left:50%;
-    margin-left:-150px;
+    bottom: 30px;
+    width: 100%;
+    // right:25%;
+    // left:50%;
+    // margin-left:-150px;
+
+    @media (max-width: 768px) {
+            bottom: 20px;
+       }
 `
 
 const Title = styled.h2`
@@ -97,7 +103,7 @@ const MainJoin = (props) => {
             </CustomBody>
         </CustomCard>
         </CustomCol>
-        <CustomCol lg={6} md={6} sm={12} className="pl-0 bg-warning">
+        <CustomCol lg={6} md={6} sm={12} className="bg-warning">
         <CustomCard>
             <CustomBody>
                 <Title>{partner.heading}</Title>
