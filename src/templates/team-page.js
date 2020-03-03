@@ -27,7 +27,7 @@ function Member(props){
   return(
     <Col lg={4} md={4} sm={12}>
       <Card>
-        <Card.Img variant="top" src="https://via.placeholder.com/150" />
+        <Card.Img variant="top" src={!! member.image.childImageSharp ? member.image.childImageSharp.fluid.src : member } />
         <Card.Body>
         <Card.Title>{member.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{member.title}</Card.Subtitle>
@@ -96,13 +96,13 @@ export const teamPageQuery = graphql`
       title
       teammembers{
          members{
-        #   image {
-        #   childImageSharp {
-        #     fluid(maxWidth: 150, quality: 100) {
-        #       ...GatsbyImageSharpFluid
-        #     }
-        #   }
-        # }
+              image {
+              childImageSharp {
+                fluid(maxWidth: 150, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           mail
           name
           title
