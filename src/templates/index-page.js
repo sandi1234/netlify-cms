@@ -37,10 +37,12 @@ const MainContentWrapper = styled(Container)`
 
 const MainHeading = styled.h1`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 6vw;
+font-size: 5vw;
 font-style: normal;
 font-weight: 900;
-letter-spacing: -0.03125em;
+// letter-spacing: -0.03125em;
+// letter-spacing: 10px;
+
 line-height: 1.06;
 color: white;
 
@@ -55,10 +57,12 @@ color: white;
 
 const SubHeading = styled.h2`
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 3.8vw;
+font-size: 3.2vw;
 font-style: normal;
 font-weight: 900;
-letter-spacing: -0.03125em;
+// letter-spacing: -0.03125em;
+// letter-spacing: 10px;
+
 line-height: 1.06;
 color: white;
 @media (max-width: 768px) {
@@ -84,7 +88,7 @@ display: block;
 width: 40%;
 background-color: transparent;
 border: 1px solid white;
-border-radius: 30px;
+border-radius: 45px;
 padding: 10px 20px 10px 20px;
 text-decoration: none;
 &:hover{

@@ -47,6 +47,10 @@ text-decoration: none;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    width: 46%;
+}
 `
 
 const CenterBtn = styled.div`
@@ -56,9 +60,6 @@ const CenterBtn = styled.div`
     text-align: center;
     bottom: 30px;
     width: 100%;
-    // right:25%;
-    // left:50%;
-    // margin-left:-150px;
 
     @media (max-width: 768px) {
             bottom: 20px;
