@@ -103,40 +103,40 @@ text-decoration: none;
 }
 `
 
-const CenterBtn = styled.div`
-  margin: 40px auto;
-  width: 60%;
+// const CenterBtn = styled.div`
+//   margin: 40px auto;
+//   width: 60%;
 
-`
+// `
 
-const WhoWeAreButton = styled(Link)`
-font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 30px;
-font-style: normal;
-font-weight: 600;
-color: white;
-display: block;
-width: 100%;
-background-color: green;
-border: 0px solid black;
-border-radius: 45px;
-padding: 15px 30px 15px 30px;
-text-decoration: none;
-&:hover{
-    color: white;
-    // background: rgb(40,167,69);
-    // background: linear-gradient(90deg, rgba(40,167,69,1) 25%, rgba(255,193,7,1) 75%);
-    // background: rgb(124,251,63);
-    // background: radial-gradient(circle, rgba(124,251,63,1) 0%, rgba(252,244,70,1) 100%);
-    background: darkgreen;
-}
+// const WhoWeAreButton = styled(Link)`
+// font-family: "FF Mark", Helvetica, Arial, sans-serif;
+// font-size: 30px;
+// font-style: normal;
+// font-weight: 600;
+// color: white;
+// display: block;
+// width: 100%;
+// background-color: green;
+// border: 0px solid black;
+// border-radius: 45px;
+// padding: 15px 30px 15px 30px;
+// text-decoration: none;
+// &:hover{
+//     color: white;
+//     // background: rgb(40,167,69);
+//     // background: linear-gradient(90deg, rgba(40,167,69,1) 25%, rgba(255,193,7,1) 75%);
+//     // background: rgb(124,251,63);
+//     // background: radial-gradient(circle, rgba(124,251,63,1) 0%, rgba(252,244,70,1) 100%);
+//     background: darkgreen;
+// }
 
-&:focus, &:hover, &:visited, &:link, &:active {
-    text-decoration: none;
-}
+// &:focus, &:hover, &:visited, &:link, &:active {
+//     text-decoration: none;
+// }
 
 
-`
+// `
 
 const CustomCard = styled(Card)`
     margin: 42px 0px 40px 0px;
@@ -158,6 +158,12 @@ line-height: 1.06;
 color: black;
 // text-align: center;
 padding: 20px 0px 10px 0px;
+
+@media (max-width: 768px) {
+  font-size: 30px;
+
+}
+
 `
 
 // const Image = styled.img`
@@ -263,11 +269,11 @@ export const IndexPageTemplate = ({
                     <Col className="mb-3" lg={12} md={12} sm={12}>
                     {whoweare.col3}
 
-                    <CenterBtn>
+                    {/* <CenterBtn>
                         <WhoWeAreButton to={whoweare.btnLink} className="text-uppercase text-center"  variant="primary" size="lg" block>
                         {whoweare.btnText}
                     </WhoWeAreButton> 
-                    </CenterBtn>
+                    </CenterBtn> */}
                     </Col>
                     </Row>
                 </Card.Text>

@@ -49,6 +49,14 @@ const Headline = styled.div`
   background-color: blue;
   border: 5px solid white;
   border-radius: 150px;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    border-radius: 100px;
+  }
 `
 
 

@@ -27,7 +27,7 @@ function Member(props){
   const {member} = props;
   return(
     <Col lg={4} md={4} sm={12}>
-      <Card>
+      <Card className="mb-4">
         <Card.Img variant="top" src={!! member.image.childImageSharp ? member.image.childImageSharp.fluid.src : member } alt={member.name} />
         <Card.Body>
         <Card.Title>{member.name}</Card.Title>

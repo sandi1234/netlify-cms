@@ -33,7 +33,7 @@ font-style: normal;
 font-weight: 600;
 color: white;
 display: block;
-width: 40%;
+width: 41.5%;
 // background-color: blue;
 border: 1px solid white;
 border-radius: 25px;

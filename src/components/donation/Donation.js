@@ -1,6 +1,6 @@
 import React from "react"
 import {Link } from "gatsby"
-import { Row, Col, Container} from "react-bootstrap"
+// import { Row, Col, Container} from "react-bootstrap"
 import styled from 'styled-components'
 import { faDonate } from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -8,21 +8,29 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 
 const ContentWraper = styled.div`
-padding: 25px 0px 105px 0px;
-text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 `
 
-const ButtonLinkIntro = styled(Link)`
+const ButtonLink = styled(Link)`
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%, 0%);
 font-family: "FF Mark", Helvetica, Arial, sans-serif;
-font-size: 2.5rem;
+font-size: 2.3vw;
 font-style: normal;
 font-weight: 600;
 color: white;
 display: block;
-width: 100%;
+text-transform: uppercase;
+width: 33%;
 background-color: transparent;
+// background-color: deepskyblue;
 border: 1px solid white;
-border-radius: 5px;
+border-radius: 45px;
 padding: 15px 30px 15px 30px;
 text-decoration: none;
 &:hover{
@@ -34,33 +42,32 @@ text-decoration: none;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    font-size: 2.9vw;
+    width: 50%;
+  }
 `
 
 const DonationDonate = styled(FontAwesomeIcon)`
     font-size: 200px;
     color: #5cb85c;
+    display: inline-block;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+        font-size: 130px;
+      }
 
 `
 
 const Donation = (props) => {
-    // const {
-    //         donateText, 
-    //         donateUrl, 
-    //     } = props;
 
     return (
   <ContentWraper>
-       <Container>
-        <Row className="justify-content-md-center">
-            <Col lg={6} md={6} sm={6}>
             <DonationDonate icon={faDonate} />
-                <ButtonLinkIntro to="/" className="text-uppercase"  variant="primary" size="lg" block>
+                <ButtonLink to="/">
                     Donate to empower
-                </ButtonLinkIntro>
-            </Col>
-        </Row>
-    </Container>
+                </ButtonLink>
   </ContentWraper>
 )
 

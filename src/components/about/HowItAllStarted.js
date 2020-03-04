@@ -3,7 +3,10 @@ import { Row, Col, Container} from "react-bootstrap"
 import styled from 'styled-components';
 
 const CustomContainer = styled(Container)`
-
+    font-size: 20px;
+    @media (max-width: 768px) {
+        font-size: 20px;
+      }
 `
 
 const Headline = styled.div`
@@ -12,6 +15,12 @@ const Headline = styled.div`
     font-size: 2.5rem;
     margin: 50px 0px 50px 0px;
     text-align: center;
+
+    @media (max-width: 768px) {
+        font-weight: 600;
+        font-size: 2.0rem;
+      }
+
 `
 
 

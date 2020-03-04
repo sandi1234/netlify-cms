@@ -3,7 +3,10 @@ import {Row, Col, Container, Tabs, Tab} from "react-bootstrap"
 import styled from 'styled-components';
 
 const CustomContainer = styled(Container)`
-
+  font-size: 18px;
+  @media (max-width: 768px) {
+      font-size: 16px;
+    }
 `
 
 function Mission(props) {
